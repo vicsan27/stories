@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>ComicCraft - AI Comic Generator</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+
+        <div class="logo">
+            🎨 ComicCraft
+        </div>
+
+        <div class="nav-links">
+            <a href="#home">Home</a>
+            <a href="#create">Create Comic</a>
+            <a href="#about">About</a>
+        </div>
+
+    </nav>
+
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+
+        <div class="hero-content">
+
+            <span class="badge">✨ AI Powered Comic Creator</span>
+
+            <h1>
+                Create Amazing Comics
+                <span>With AI</span>
+            </h1>
+
+            <p>
+                Turn your ideas into creative stories, characters,
+                dialogues and comic scenes using Generative AI.
+            </p>
+
+            <a href="#create" class="primary-btn">
+                🚀 Create Your Comic
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- Create Comic Section -->
+    <section class="create-section" id="create">
+
+        <div class="section-title">
+            <span>AI COMIC GENERATOR</span>
+            <h2>Create Your Story</h2>
+            <p>
+                Enter your idea and let AI transform it into a comic story.
+            </p>
+        </div>
+
+
+        <div class="generator-card">
+
+            <label for="storyIdea">
+                💡 What's your comic idea?
+            </label>
+
+            <textarea
+                id="storyIdea"
+                placeholder="Example: A young student discovers a magical book..."
+            ></textarea>
+
+
+            <div class="options">
+
+                <div class="option-box">
+
+                    <label for="genre">
+                        Genre
+                    </label>
+
+                    <select id="genre">
+
+                        <option value="Adventure">
+                            Adventure
+                        </option>
+
+                        <option value="Fantasy">
+                            Fantasy
+                        </option>
+
+                        <option value="Comedy">
+                            Comedy
+                        </option>
+
+                        <option value="Romance">
+                            Romance
+                        </option>
+
+                        <option value="Science Fiction">
+                            Science Fiction
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <div class="option-box">
+
+                    <label for="style">
+                        Comic Style
+                    </label>
+
+                    <select id="style">
+
+                        <option value="Modern">
+                            Modern
+                        </option>
+
+                        <option value="Manga">
+                            Manga
+                        </option>
+
+                        <option value="Superhero">
+                            Superhero
+                        </option>
+
+                        <option value="Cartoon">
+                            Cartoon
+                        </option>
+
+                    </select>
+
+                </div>
+
+            </div>
+
+
+            <button
+                class="generate-btn"
+                onclick="generateComic()"
+            >
+                ✨ Generate Comic
+            </button>
+
+
+            <!-- Loading -->
+            <div id="loading" class="loading hidden">
+                <div class="spinner"></div>
+                <p>AI is creating your comic...</p>
+            </div>
+
+
+            <!-- Result -->
+            <div id="result" class="result hidden">
+
+                <h3>📖 Generated Comic</h3>
+
+                <div id="comicOutput"></div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Features -->
+    <section class="features">
+
+        <div class="section-title">
+
+            <span>FEATURES</span>
+
+            <h2>Everything You Need</h2>
+
+        </div>
+
+
+        <div class="feature-grid">
+
+            <div class="feature-card">
+
+                <div class="feature-icon">🤖</div>
+
+                <h3>AI Story Generation</h3>
+
+                <p>
+                    Generate creative comic stories using Generative AI.
+                </p>
+
+            </div>
+
+
+            <div class="feature-card">
+
+                <div class="feature-icon">👤</div>
+
+                <h3>Character Creation</h3>
+
+                <p>
+                    Create unique characters for your comic story.
+                </p>
+
+            </div>
+
+
+            <div class="feature-card">
+
+                <div class="feature-icon">💬</div>
+
+                <h3>AI Dialogues</h3>
+
+                <p>
+                    Automatically generate dialogues for every scene.
+                </p>
+
+            </div>
+
+
+            <div class="feature-card">
+
+                <div class="feature-icon">🎨</div>
+
+                <h3>Comic Design</h3>
+
+                <p>
+                    Organize your story into attractive comic scenes.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- About -->
+    <section class="about" id="about">
+
+        <div class="about-content">
+
+            <span>ABOUT COMICCRAFT</span>
+
+            <h2>Bring Your Imagination To Life</h2>
+
+            <p>
+                ComicCraft is an AI-powered platform designed to help
+                users create comic stories easily. Users can enter an
+                idea and generate stories, characters, scenes and
+                dialogues with the help of Generative AI.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- Footer -->
+    <footer>
+
+        <p>
+            © 2026 ComicCraft | AI Powered Comic Generator
+        </p>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
